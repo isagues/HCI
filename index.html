@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+<div id="app">
+    <v-app>
+        <v-card
+                color="grey lighten-4"
+                flat
+                height="200px"
+                tile
+        >
+            <v-toolbar color="#65C2AD" dense>
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
+                <v-toolbar-title>Title</v-toolbar-title>
+
+                <v-spacer></v-spacer>
+
+                <v-btn icon>
+                    <v-icon>mdi-magnify</v-icon>
+                </v-btn>
+
+                <v-btn text>
+                    <span>Favoritos</span>
+                </v-btn>
+                <v-btn text>
+                    <span>Hogares</span>
+                </v-btn>
+                <v-btn text>
+                    <span>Rutinas</span>
+                </v-btn>
+                <v-btn text>
+                    <span>Consumos</span>
+                </v-btn>
+            </v-toolbar>
+        </v-card>
+    </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+    })
+</script>
+</body>
+</html>
