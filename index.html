@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
@@ -9,7 +10,7 @@
 <body>
 <div id="app">
     <v-app>
-        <v-card class="overflow-hidden">
+        <div class="navbar">
             <v-app-bar
                     absolute
                     color="#65C2AD"
@@ -32,11 +33,37 @@
                     <span>Consumos</span>
                 </v-btn>
             </v-app-bar>
-                <v-container style="height: 1500px;">
+        </div>
+        <br></br>
+        <br></br>
+        <div class="card">
+            <v-card
+                    max-width="344"
+                    class="mx-auto"
+            >
+                <v-list-item>
+                    <v-list-item-avatar color="#FFF3C8"></v-list-item-avatar>
+                    <v-list-item-content>
+                        <v-list-item-title class="headline">Aire Acondicionado</v-list-item-title>
+                        <v-list-item-subtitle>Prendido: Calor - 28C</v-list-item-subtitle>
+                    </v-list-item-content>
+                </v-list-item>
+                <v-card-actions>
+                    <v-switch
+                        v-model="switch1"
+                    >
+                    </v-switch>
 
-                </v-container>
-            </v-sheet>
-        </v-card>
+                    <v-spacer></v-spacer>
+                    <v-btn icon>
+                        <v-icon>mdi-heart</v-icon>
+                    </v-btn>
+                    <v-btn icon>
+                        <v-icon>mdi-share-variant</v-icon>
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </div>
     </v-app>
 </div>
 
