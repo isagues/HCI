@@ -9,23 +9,16 @@
 <body>
 <div id="app">
     <v-app>
-        <v-card
-                color="grey lighten-4"
-                flat
-                height="200px"
-                tile
-        >
-            <v-toolbar color="#65C2AD" dense>
-                <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
+        <v-card class="overflow-hidden">
+            <v-app-bar
+                    absolute
+                    color="#65C2AD"
+            >
                 <v-toolbar-title>SMARTIFY</v-toolbar-title>
-
                 <v-spacer></v-spacer>
-
                 <v-btn icon>
                     <v-icon>mdi-magnify</v-icon>
                 </v-btn>
-
                 <v-btn text>
                     <span>Favoritos</span>
                 </v-btn>
@@ -38,7 +31,11 @@
                 <v-btn text>
                     <span>Consumos</span>
                 </v-btn>
-            </v-toolbar>
+            </v-app-bar>
+                <v-container style="height: 1500px;">
+
+                </v-container>
+            </v-sheet>
         </v-card>
     </v-app>
 </div>
