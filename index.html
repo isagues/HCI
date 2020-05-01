@@ -11,10 +11,7 @@
 <div id="app">
     <v-app>
         <div class="navbar">
-            <v-app-bar
-                    absolute
-                    color="#65C2AD"
-            >
+            <v-toolbar fixed app color="#65C2AD">
                 <v-toolbar-title>SMARTIFY</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-btn icon>
@@ -32,38 +29,80 @@
                 <v-btn text>
                     <span>Consumos</span>
                 </v-btn>
-            </v-app-bar>
+            </v-toolbar>
         </div>
-        <br></br>
-        <br></br>
-        <div class="card">
-            <v-card
-                    max-width="344"
-                    class="mx-auto"
-            >
-                <v-list-item>
-                    <v-list-item-avatar color="#FFF3C8"></v-list-item-avatar>
-                    <v-list-item-content>
-                        <v-list-item-title class="headline">Aire Acondicionado</v-list-item-title>
-                        <v-list-item-subtitle>Prendido: Calor - 28C</v-list-item-subtitle>
-                    </v-list-item-content>
-                </v-list-item>
-                <v-card-actions>
-                    <v-switch
-                        v-model="switch1"
-                    >
-                    </v-switch>
+<!--        <br></br>-->
+<!--        <br></br>-->
+<!--        <div class="card">-->
+<!--            <v-card-->
+<!--                    max-width="344"-->
+<!--                    class="mx-auto"-->
+<!--            >-->
+<!--                <v-list-item>-->
+<!--                    <v-list-item-avatar color="#FFF3C8"></v-list-item-avatar>-->
+<!--                    <v-list-item-content>-->
+<!--                        <v-list-item-title class="headline">Aire Acondicionado</v-list-item-title>-->
+<!--                        <v-list-item-subtitle>Prendido: Calor - 28C</v-list-item-subtitle>-->
+<!--                    </v-list-item-content>-->
+<!--                </v-list-item>-->
+<!--                <v-card-actions>-->
+<!--                    <v-switch-->
+<!--                        v-model="switch1"-->
+<!--                    >-->
+<!--                    </v-switch>-->
 
-                    <v-spacer></v-spacer>
-                    <v-btn icon>
-                        <v-icon>mdi-heart</v-icon>
-                    </v-btn>
-                    <v-btn icon>
-                        <v-icon>mdi-share-variant</v-icon>
-                    </v-btn>
-                </v-card-actions>
-            </v-card>
-        </div>
+<!--                    <v-spacer></v-spacer>-->
+<!--                    <v-btn icon>-->
+<!--                        <v-icon>mdi-heart</v-icon>-->
+<!--                    </v-btn>-->
+<!--                    <v-btn icon>-->
+<!--                        <v-icon>mdi-share-variant</v-icon>-->
+<!--                    </v-btn>-->
+<!--                </v-card-actions>-->
+<!--            </v-card>-->
+<!--        </div>-->
+        <v-container >
+            <v-row justify="center">
+                <v-col md="8">
+                    <v-row>
+                        <v-col md="6" v-for="n in (0,2)" :key="n">
+                            <v-expansion-panels multiple="true">
+                                <v-expansion-panel v-for="n in (1,10)" :key="n" class="ma-1">
+                                    <v-expansion-panel-header>
+                                        <v-list-item>
+                                            <v-list-item-avatar>
+                                                <v-img src="src/aire.png"></v-img>
+                                            </v-list-item-avatar>
+                                            <v-list-item-content>
+                                                <v-list-item-subtitle>living</v-list-item-subtitle>
+                                                <v-list-item-title>Aire Acondicionado</v-list-item-title>
+                                                <v-list-item-subtitle class="text--primary">Estado</v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-list-item>
+                                        <v-card flat="true">
+                                            <v-card-actions>
+                                                <v-spacer></v-spacer>
+                                                <v-btn icon>
+                                                    <v-icon>mdi-heart</v-icon>
+                                                </v-btn>
+                                            </v-card-actions>
+                                        </v-card>
+                                    </v-expansion-panel-header>
+                                    <v-expansion-panel-content>
+                                        <v-card flat="true">
+                                            <v-card-actions>
+                                                <v-switch v-model="switch1"></v-switch>
+                                                <v-spacer></v-spacer>
+                                            </v-card-actions>
+                                        </v-card>
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel >
+                            </v-expansion-panels>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
+        </v-container>
     </v-app>
 </div>
 
