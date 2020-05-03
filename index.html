@@ -10,62 +10,28 @@
 <body>
 <div id="app">
     <v-app>
-        <div class="navbar">
-            <v-toolbar fixed app color="#65C2AD">
-                <v-toolbar-title>SMARTIFY</v-toolbar-title>
-                <v-spacer></v-spacer>
-                <v-btn icon>
-                    <v-icon>mdi-magnify</v-icon>
-                </v-btn>
-                <v-btn text>
-                    <span>Favoritos</span>
-                </v-btn>
-                <v-btn text>
-                    <span>Hogares</span>
-                </v-btn>
-                <v-btn text>
-                    <span>Rutinas</span>
-                </v-btn>
-                <v-btn text>
-                    <span>Consumos</span>
-                </v-btn>
-            </v-toolbar>
-        </div>
-<!--        <br></br>-->
-      <br></br>
-<!--        <div class="card">-->
-<!--            <v-card max-width="344" class="mx-auto">-->
-<!--                <v-list-item>-->
-<!--                    <v-list-item-avatar color="#FFF3C8"></v-list-item-avatar>-->
-<!--                    <v-list-item-content>-->
-<!--                        <v-list-item-title class="headline">Aire Acondicionado</v-list-item-title>-->
-<!--                        <v-list-item-subtitle>Prendido: Calor - 28C</v-list-item-subtitle>-->
-<!--                    </v-list-item-content>-->
-<!--                </v-list-item>-->
-<!--                <v-card-actions>-->
-<!--                    <v-row>-->
-<!--                        <v-col >-->
-<!--                            <v-switch v-model="switch1" class="pa-3"></v-switch>-->
-<!--                            <v-btn icon >-->
-<!--                                <v-icon>mdi-skip-previous</v-icon>-->
-<!--                            </v-btn>-->
-<!--                            <v-btn icon >-->
-<!--                                <v-icon>mdi-play</v-icon>-->
-<!--                            </v-btn>-->
-<!--                            <v-btn icon >-->
-<!--                                <v-icon>mdi-skip-next</v-icon>-->
-<!--                            </v-btn>-->
-<!--                            <v-spacer></v-spacer>-->
-<!--                            <v-btn text class="pr-10">Mas</v-btn>-->
-<!--                        </v-col>-->
-<!--                        <v-col cols="12">-->
-<!--                            <v-slider></v-slider>-->
-<!--                        </v-col>-->
-<!--                    </v-row>-->
-<!--                </v-card-actions>-->
-<!--            </v-card>-->
-<!--        </div>-->
         <v-container>
+            <div class="navbar" padding>
+                <v-app-bar fixed color="#72E1C7">
+                    <v-toolbar-title>SMARTIFY</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn icon>
+                        <v-icon>mdi-magnify</v-icon>
+                    </v-btn>
+                    <v-btn text>
+                        <span>Favoritos</span>
+                    </v-btn>
+                    <v-btn text>
+                        <span>Hogares</span>
+                    </v-btn>
+                    <v-btn text>
+                        <span>Rutinas</span>
+                    </v-btn>
+                    <v-btn text>
+                        <span>Consumos</span>
+                    </v-btn>
+                </v-app-bar>
+            </div>
             <v-row justify="center">
                 <v-col md="4">
                     <v-card > <!--class="mx-auto"--> <!-- -->
