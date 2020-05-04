@@ -1,0 +1,17 @@
+#rounded{
+    border-radius: 25px;
+}
+#very-rounded{
+    border-radius: 45px;
+}
+.top-rounded{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.border-dashed{
+    border-radius: 25px 25px 25px 25px;
+    -moz-border-radius: 25px 25px 25px 25px;
+    -webkit-border-radius: 25px 25px 25px 25px;
+    border: 3px dashed #a6a6a6;
+
+}
