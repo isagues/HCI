@@ -33,10 +33,9 @@
                 </v-toolbar>
             </div>
         </template>
-               <v-card v-for="routine in routines" :key="routine.name" elevation="5" class="mx-auto my-2"
+               <v-card v-for="routine in routines" :key="routine.name" elevation="5" class="mx-auto my-2 rounded"
                        max-width="750"
                        max-height="80"
-                       id="rounded"
                         >
                    <v-container fluid>
                    <v-row no-gutters>
@@ -74,7 +73,7 @@
                             <v-spacer></v-spacer>
                         </v-col>
                         <v-col align-self="center" justify="center" md="6">
-                            <v-btn height="70" width="750"  class="ma-auto text--secondary border-dashed" id="rounded" text>
+                            <v-btn height="70" width="750"  class="ma-auto text--secondary border-dashed rounded"  text>
                                 <v-icon large dark>mdi-plus</v-icon>
                                 Agregar Rutina
                             </v-btn>

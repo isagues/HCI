@@ -1,8 +1,8 @@
-#rounded{
+.rounded{
     border-radius: 25px;
 }
-#very-rounded{
-    border-radius: 45px;
+.v-card.rounded.v-sheet{
+    border-radius: 25px;
 }
 .top-rounded{
     border-top-left-radius: 25px;
