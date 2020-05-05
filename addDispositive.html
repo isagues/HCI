@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+<div id="app">
+    <v-app >
+        <template>
+            <div class="navbar mb-5">
+                <v-toolbar fixed app color="#65C2AD">
+                    <v-container fluid>
+                        <v-row no-gutters>
+                            <v-col md="5">
+                                <v-list-item dense>
+                                    <v-toolbar-title class="headline">SMARTIFY</v-toolbar-title>
+                                    <v-btn class="ml-5" color="red" id="rounded" light outlined text> Cancelar</v-btn>
+                                </v-list-item>
+                            </v-col>
+                            <v-col md="4" >
+                                <v-list-item dense>
+                                    <v-toolbar-title class="ml-9">NUEVA RUTINA</v-toolbar-title>
+                                </v-list-item>
+                            </v-col>
+                        </v-row>
+                    </v-container>
+                </v-toolbar>
+            </div>
+        </template>
+        <template>
+                <v-container class="pa-2">
+                    <v-row no-gutters class=" ma-0 pa-0">
+                        <v-col cols="12" md="12">
+                            <p class="headline subtitle-1 ma-0 pa-0 text-center">Agregar Dispositivo</p>
+                        </v-col>
+                        <v-row class=" ma-0 pa-0" >
+                            <v-col cols="3" md="3" class=" ma-1 pa-0" >
+                                <v-btn outlined color="#3C3F58"  text id="rounded">
+                                    Volver
+                                </v-btn>
+                            </v-col>
+                            <v-col cols="6" md="6">
+                                <v-stepper id="rounded">
+                                    <v-stepper-header>
+                                        <v-stepper-step step="1"></v-stepper-step>
+
+                                        <v-divider></v-divider>
+
+                                        <v-stepper-step step="2"></v-stepper-step>
+
+                                        <v-divider></v-divider>
+
+                                        <v-stepper-step step="3"></v-stepper-step>
+                                    </v-stepper-header>
+                                </v-stepper>
+                            </v-col>
+                        </v-row>
+                </v-container>
+        </template>
+        <template>
+        <v-card elevation="5" class="mx-auto"
+                width="800"
+                height="1100"
+                id="rounded"
+        >
+            <v-container class="py-0 my-0">
+                <v-row class="py-0 my-0">
+                    <v-tabs class="top-rounded"
+                            fixed-tabs
+                            background-color="#65C2AD"
+                            dark
+                    >
+                        <v-tabs-slider color="black"></v-tabs-slider>
+                        <v-tab>
+                            Casa
+                        </v-tab>
+                        <v-tab>
+                            Oficina
+                        </v-tab>
+                        <v-tab>
+                            Costa
+                        </v-tab>
+                    </v-tabs>
+                </v-row>
+                <v-row class="py-2 my-1" >
+                    <v-col cols="12" md="12" >
+                        <h1 class="headline ma-0 pa-0 text-center">Tipos de dispositivo</h1>
+                    </v-col>
+                </v-row>
+                <v-row>
+                    <v-card elevation="3" class="mx-auto"
+                            width="700"
+                            height="150"
+                            id="rounded">
+                        <v-container>
+                            <v-row align="center" wrap no-gutters>
+                                <v-col v-for="dispositive in dispositives" :key="dispositive.name" cols="4" md="4">
+                                    <v-list-item>
+                                        <v-avatar class="mr-2">
+                                            <img :src="dispositive.img">
+                                        </v-avatar>
+                                        <v-list-item-content class="py-3 px-0">
+                                            <v-list-item-title class="headline pt-1 pb-2 ">{{dispositive.name}}</v-list-item-title>
+                                        </v-list-item-content>
+                                    </v-list-item>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+
+                    </v-card>
+                </v-row>
+                <v-row class="py-2 my-1">
+                    <v-col cols="12" md="12" >
+                        <h1 class="headline ma-0 pa-0 text-center">Habitaciones</h1>
+                    </v-col>
+                </v-row>
+
+                 <v-row v-for="room in homerooms" :key="room.name" class="my-4">
+                    <v-card flat elevation="4"
+                            class="ma-auto "
+                            width="750"
+                            height="80"
+                            id="rounded">
+                        <v-container fluid class="pa-0 ma-1">
+                            <v-row align="center" no-gutters>
+                                <v-col cols="5" md="5">
+                                    <h1 class="headline ml-3 " >{{room.name}}</h1>
+                                </v-col>
+                                <v-col cols="3" md="3">
+                                    <v-spacer></v-spacer>
+                                </v-col>
+                                <v-col v-for="dispositive in room.disp" :key="dispositive.name" cols="1" md="1">
+                                  <v-list-item>
+                                      <v-list-item-avatar class="mx-1" >
+                                          <img :src="dispositive.img">
+                                      </v-list-item-avatar>
+                                   </v-list-item>
+                                </v-col>
+                                <v-col cols="1" md="1" >
+                                    <v-icon color="#65C2AD" large class="px-4">mdi-chevron-right</v-icon>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+                    </v-card>
+                </v-row>
+            </v-container>
+        </v-card>
+        </template>
+    </v-app>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+    export default {
+
+    }
+</script>
+<script>
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: {
+            routines: [
+                { name: "Modo Dormir", desc: "Apaga las luces y baja las persianas"},
+                { name: "Modo Cine", desc: "Baja las luces y prende el equipo de musica"},
+                { name: "Regar Frente", desc: "Prende aspersores del frente del hogar"},
+                { name: "Refrescar living", desc: "Bajar persianas living y prender el aire en 24"},
+            ],
+            dispositives:[
+                {name: "Luces", img:"assets/lampara.png",iconcolor:"#E9D94D",backcolor:"#FFFBDB"},
+                {name: "Hornos", img:"assets/horno.png",iconcolor:"#C01616",backcolor:"#FFBBBB"},
+                {name: "Aires", img:"assets/aire.png",iconcolor:"#FFC700",backcolor:"#FFF3C8"},
+                {name: "Parlantes", img:"assets/parlante.png",iconcolor:"#6563FF",backcolor:"#E1E0FE"},
+                {name: "Regadores", img:"assets/regador.png",iconcolor:"#BF38FF",backcolor:"#F2D6FF"},
+                {name: "Aspiradoras", img:"assets/aspiradora.png",iconcolor:"#0091B1",backcolor:"#BEF3FF"},
+
+            ],
+            homerooms:[
+                { name: "Living Room", disp: [{img:"assets/lampara.png"},
+                        { img:"assets/parlante.png"},
+                        { img:"assets/aire.png"}]},
+                { name: "Cocina", disp: [{img:"assets/lampara.png"},
+                        { img:"assets/parlante.png"},
+                        { img:"assets/horno.png"}]},
+                { name: "Habitacion Principal", disp: [{img:"assets/lampara.png"},
+                        { img:"assets/parlante.png"},
+                        { img:"assets/aire.png"},]},
+                { name: "Habitacion Maria", disp: [{img:"assets/lampara.png"},
+                        { img:"assets/parlante.png"},
+                        { img:"assets/aspiradora.png"}]},
+                { name: "Habitacion Juan", disp: [{img:"assets/lampara.png"},
+                        { img:"assets/parlante.png"},
+                        { img:"assets/aspiradora.png"}]},
+            ]
+        }
+
+
+    })
+</script>
+</body>
+</html>
+<script>
+    import VCol from "vuetify/src/components/VGrid/VCol";
+
+    export default {
+        components: {VCol}
+    }
+</script>

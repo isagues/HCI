@@ -10,7 +10,199 @@
 <body>
 <div id="app">
     <v-app>
+        <v-container>
+            <div class="navbar" padding>
+                <v-app-bar fixed color="#72E1C7">
+                    <v-toolbar-title>SMARTIFY</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn icon>
+                        <v-icon>mdi-magnify</v-icon>
+                    </v-btn>
+                    <v-btn text>
+                        <span>Favoritos</span>
+                    </v-btn>
+                    <v-btn text>
+                        <span>Hogares</span>
+                    </v-btn>
+                    <v-btn text>
+                        <span>Rutinas</span>
+                    </v-btn>
+                    <v-btn text>
+                        <span>Consumos</span>
+                    </v-btn>
+                </v-app-bar>
+            </div>
+            <v-row justify="center">
+                <v-col md="4">
+                    <v-card > <!--class="mx-auto"--> <!-- -->
+                        <v-conteiner >
+                            <v-row dense>
+                                <v-col md="12" class="px-5">
+                                    <v-container class="py-0">
+                                        <v-row align="center" justify="space-between">
+                                            <v-col class="py-0">
+                                                <v-list-item class="px-0">
+                                                    <v-list-item-avatar>
+                                                        <v-img src="src/parlante.png"></v-img>
+                                                    </v-list-item-avatar>
+<!--                                                    <v-list-item-avatar color="#FFF3C8"></v-list-item-avatar>-->
+                                                    <v-list-item-content>
+                                                        <v-list-item-subtitle>Living Room</v-list-item-subtitle>
+                                                        <v-list-item-title class="headline">Equipo de musica</v-list-item-title>
+                                                        <v-list-item-subtitle class="text--primary">Reproduciendo: Clasico</v-list-item-subtitle>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+                                            </v-col>
+                                            <v-spacer></v-spacer>
+                                            <v-col>
+                                                <v-btn icon>
+                                                    <v-icon>mdi-heart</v-icon>
+                                                </v-btn>
+                                                <v-btn icon>
+                                                    <v-icon>mdi-dots-vertical</v-icon>
+                                                </v-btn>
+                                            </v-col>
+                                        </v-row>
+                                    </v-container>
+                                </v-col>
+                                <v-col md="12"  class="px-5">
+                                    <v-container class="py-0"> <!--class="px-3 py-0" -->
+                                        <v-row align="center" dense justify="space-around"><!--class="my-0 py-0" -->
+                                            <v-col>
+                                                <v-switch dense></v-switch><!--class="px-3 my-auto" -->
+                                            </v-col>
+                                            <v-col>
+                                                <v-btn icon >
+                                                    <v-icon>mdi-skip-previous</v-icon>
+                                                </v-btn>
+                                            </v-col>
+                                            <v-col>
+                                                <v-btn icon >
+                                                    <v-icon>mdi-play</v-icon>
+                                                </v-btn>
+                                            </v-col>
+                                            <v-col>
+                                                <v-btn icon >
+                                                    <v-icon>mdi-skip-next</v-icon>
+                                                </v-btn>
+                                            </v-col>
+                                            <v-col ><!--class="pr-10" -->
+                                                <v-btn text >Menos</v-btn>
+                                            </v-col>
+                                        </v-row>
+                                    </v-container>
+                                </v-col>
+                                <v-col md="12" class="px-5">
+                                    <v-slider dense v-model="media"  prepend-icon="mdi-volume-medium"></v-slider>
+<!--                                    <v-container class="py-0">-->
+<!--                                        <v-row>-->
+<!--                                            <v-col><v-slider v-model="media"  prepend-icon="mdi-volume-medium"></v-slider>&lt;!&ndash;class="px-8" &ndash;&gt;</v-col>-->
+<!--                                        </v-row>-->
+<!--                                    </v-container>-->
+                                </v-col>
+                                <v-col md="12" class="px-5">
+                                    <v-container class="py-0">
+                                        <v-row align="center" justify="left">
+                                            <v-col>
+                                                <v-list-item class="px-0">
+                                                    <v-list-item-content>
+                                                        <v-list-item-title class="title">Genero:</v-list-item-title>
+                                                    </v-list-item-content>
+                                                </v-list-item>
+                                            </v-col>
+                                            <v-col md="8" class="py-0"> <!--class="pr-10" -->
+                                                <v-select :items="items" dense value="Pop"></v-select>
+                                            </v-col>
+                                        </v-row>
+                                    </v-container>
+                                </v-col>
+                                <v-col md="12" class="px-5">
+                                    <v-container class="py-0">
+                                        <v-row>
+                                            <v-col class="py-0">
+                                                <v-list shaped > <!--class="px-7" -->
+                                                    <v-list-item-title class="title">Lista de reporduccion:</v-list-item-title>
+                                                    <v-list-item-group v-model="item" color="primary">
+                                                        <v-list-item v-for="i in (0,3)" :key="i">
+                                                            <v-list-item-icon>
+                                                                <v-icon>mdi-minus</v-icon>
+                                                            </v-list-item-icon>
+                                                            <v-list-item-content>
+                                                                <v-list-item-title>Nombre de cancion</v-list-item-title>
+                                                            </v-list-item-content>
+                                                        </v-list-item>
+                                                    </v-list-item-group>
+                                                </v-list>
+                                            </v-col>
+                                        </v-row>
+                                    </v-container>
+                                </v-col>
+                            </v-row>
+                        </v-conteiner>
+                    </v-card>
+                </v-col>
+                <v-col md="4">
+                    <v-card>
+                        <v-list-item class="px-0">
+                            <v-list-item-avatar>
+                                <v-img src="src/parlante.png"></v-img>
+                            </v-list-item-avatar>
+                            <!--                                                    <v-list-item-avatar color="#FFF3C8"></v-list-item-avatar>-->
+                            <v-list-item-content>
+                                <v-list-item-subtitle>Living Room</v-list-item-subtitle>
+                                <v-list-item-title class="headline">Equipo de musica</v-list-item-title>
+                                <v-list-item-subtitle class="text--primary">Reproduciendo: Clasico</v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-container>
 
+
+
+        <v-container >
+            <v-row justify="center">
+                <v-col md="8">
+                    <v-row>
+                        <v-col md="6" v-for="n in (0,2)" :key="n">
+                            <v-expansion-panels multiple="true">
+                                <v-expansion-panel v-for="n in (1,10)" :key="n" class="ma-1">
+                                    <v-expansion-panel-header>
+                                        <v-list-item>
+                                            <v-list-item-avatar>
+                                                <v-img src="src/aire.png"></v-img>
+                                            </v-list-item-avatar>
+                                            <v-list-item-content>
+                                                <v-list-item-subtitle>living</v-list-item-subtitle>
+                                                <v-list-item-title>Aire Acondicionado</v-list-item-title>
+                                                <v-list-item-subtitle class="text--primary">Estado</v-list-item-subtitle>
+                                            </v-list-item-content>
+                                        </v-list-item>
+                                        <v-card flat="true">
+                                            <v-card-actions>
+                                                <v-spacer></v-spacer>
+                                                <v-btn icon>
+                                                    <v-icon>mdi-heart</v-icon>
+                                                </v-btn>
+                                            </v-card-actions>
+                                        </v-card>
+                                    </v-expansion-panel-header>
+                                    <v-expansion-panel-content>
+                                        <v-card flat="true">
+                                            <v-card-actions>
+                                                <v-switch v-model="switch1"></v-switch>
+                                                <v-spacer></v-spacer>
+                                            </v-card-actions>
+                                        </v-card>
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel >
+                            </v-expansion-panels>
+                        </v-col>
+                    </v-row>
+                </v-col>
+            </v-row>
+        </v-container>
     </v-app>
 </div>
 
@@ -27,3 +219,53 @@
 </script>
 </body>
 </html>
+
+<!--<v-container>-->
+<!--    <v-row align="center">-->
+<!--        <v-col md="1">-->
+<!--            <v-list-item class="px-0">-->
+<!--                <v-list-item-avatar>-->
+<!--                    <v-img src="src/parlante.png"></v-img>-->
+<!--                </v-list-item-avatar>-->
+<!--            </v-list-item>-->
+<!--        </v-col>-->
+<!--        <v-col md="11">-->
+<!--            <v-container>-->
+<!--                <v-row dense>-->
+<!--                    <v-col dense md="12" class="py-0">-->
+<!--                        <v-container class="py-0">-->
+<!--                            <v-row dense align="center">-->
+<!--                                <v-col class="py-0">-->
+<!--                                    <v-list-item class="px-0">-->
+<!--                                        <v-list-item-content>-->
+<!--                                            <v-list-item-title>Titulo:</v-list-item-title>-->
+<!--                                        </v-list-item-content>-->
+<!--                                    </v-list-item>-->
+<!--                                </v-col>-->
+<!--                                <v-col md="10" class="py-0"> &lt;!&ndash;class="pr-10" &ndash;&gt;-->
+<!--                                    <v-text-field class="py-0"></v-text-field>-->
+<!--                                </v-col>-->
+<!--                            </v-row>-->
+<!--                        </v-container>-->
+<!--                    </v-col>-->
+<!--                    <v-col dense md="12" class="py-0">-->
+<!--                        <v-container class="py-0">-->
+<!--                            <v-row dense align="center">-->
+<!--                                <v-col class="py-0">-->
+<!--                                    <v-list-item class="px-0">-->
+<!--                                        <v-list-item-content>-->
+<!--                                            <v-list-item-subtitle>Descripcion:</v-list-item-subtitle>-->
+<!--                                        </v-list-item-content>-->
+<!--                                    </v-list-item>-->
+<!--                                </v-col>-->
+<!--                                <v-col md="9" class="py-0"> &lt;!&ndash;class="pr-10" &ndash;&gt;-->
+<!--                                    <v-text-field class="py-0" label="Opcional"></v-text-field>-->
+<!--                                </v-col>-->
+<!--                            </v-row>-->
+<!--                        </v-container>-->
+<!--                    </v-col>-->
+<!--                </v-row>-->
+<!--            </v-container>-->
+<!--        </v-col>-->
+<!--    </v-row>-->
+<!--</v-container>-->

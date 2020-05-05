@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+<div id="app">
+    <v-app>
+        <div class="navbar" padding>
+            <v-toolbar fixed app color="#72E1C7">
+                <v-toolbar-title>SMARTIFY</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-btn icon>
+                    <v-icon>mdi-magnify</v-icon>
+                </v-btn>
+                <v-btn text>
+                    <span>Favoritos</span>
+                </v-btn>
+                <v-btn text>
+                    <span>Hogares</span>
+                </v-btn>
+                <v-btn text>
+                    <span>Rutinas</span>
+                </v-btn>
+                <v-btn text>
+                    <span>Consumos</span>
+                </v-btn>
+            </v-toolbar>
+        </div>
+
+        <v-container>
+            <v-row align="stretch"  justify="center">
+                <v-col cols="10">
+                    <v-card
+                            class="mx-auto"
+                            width="60%"
+                    >
+                        <v-tabs background-color="transparent" color="basil" grow>
+                            <v-tab>Casa</v-tab>
+                            <v-tab>Oficina</v-tab>
+                            <v-tab>Casa Costa</v-tab>
+                        </v-tabs>
+
+                        <v-container fluid>
+                            <v-row>
+                                <v-col>
+                                    <v-card raised>
+                                        <v-carousel
+                                                :continuous="false"
+                                                height="300"
+                                                hide-delimiter-background
+                                                show-arrows-on-hover
+                                        >
+                                            <v-carousel-item>
+                                                <v-sheet height="100%">
+                                                    <v-row class="fill-height" align="center" justify="center">
+                                                        <div class="display-3">Slide 1</div>
+                                                    </v-row>
+                                                </v-sheet>
+                                            </v-carousel-item><v-carousel-item>
+                                            <v-sheet height="100%">
+                                                <v-row class="fill-height" align="center" justify="center">
+                                                    <div class="display-3">Slide 2</div>
+                                                </v-row>
+                                            </v-sheet>
+                                        </v-carousel-item>
+                                        </v-carousel>
+                                    </v-card>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-container>
+    </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+    })
+</script>
+</body>
+</html>
