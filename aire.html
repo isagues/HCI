@@ -76,11 +76,11 @@
                                                 <v-col cols="3">
                                                     <p>Modo:</p>
                                                 </v-col>
-                                                <v-col cols="9">
-                                                    <v-card flat class="py-12">
+                                                <v-col cols="9" class="py-0">
+                                                    <v-card flat>
                                                         <v-card-text>
                                                             <v-row>
-                                                                <v-btn-toggle v-model="toggle_exclusive" rounded dense>
+                                                                <v-btn-toggle v-model="toggle_one" mandatory rounded dense>
                                                                     <v-btn text>Frío</v-btn>
                                                                     <v-btn text>Calor</v-btn>
                                                                     <v-btn text>Ventilación</v-btn>
@@ -90,19 +90,19 @@
                                                     </v-card>
                                                 </v-col>
                                             </v-row>
-                                            <p>Desplazamiento de aspas</p>
+                                            <p class="my-2">Desplazamiento de aspas</p>
                                             <v-row align="center" justify="center">
-                                                <v-col>
-                                                    <v-card flat class="py-12">
-                                                        <v-card-text>
+                                                <v-col class="py-0">
+                                                    <v-card flat>
+                                                        <v-card-text class="py-0">
                                                             <p>Vertical:</p>
-                                                            <v-row>
-                                                                <v-btn-toggle v-model="toggle_exclusive" rounded dense>
-                                                                    <v-btn text>Auto</v-btn>
-                                                                    <v-btn text>22</v-btn>
-                                                                    <v-btn text>45</v-btn>
-                                                                    <v-btn text>67</v-btn>
-                                                                    <v-btn text>90</v-btn>
+                                                            <v-row align="center" justify="center">
+                                                                <v-btn-toggle v-model="toggle_one" mandatory rounded dense>
+                                                                    <v-btn text small>Auto</v-btn>
+                                                                    <v-btn text small>22</v-btn>
+                                                                    <v-btn text small>45</v-btn>
+                                                                    <v-btn text small>67</v-btn>
+                                                                    <v-btn text small>90</v-btn>
                                                                 </v-btn-toggle>
                                                             </v-row>
                                                         </v-card-text>
@@ -110,37 +110,37 @@
                                                 </v-col>
                                             </v-row>
                                             <v-row align="center" justify="center">
-                                                <v-col>
-                                                    <v-card flat class="py-12">
+                                                <v-col class="py-0">
+                                                    <v-card flat>
                                                         <v-card-text>
                                                             <p>Horizontal:</p>
-                                                            <v-row>
-                                                                <v-btn-toggle v-model="toggle_exclusive" rounded dense>
-                                                                    <v-btn text>Auto</v-btn>
-                                                                    <v-btn text>-90</v-btn>
-                                                                    <v-btn text>-45</v-btn>
-                                                                    <v-btn text>0</v-btn>
-                                                                    <v-btn text>45</v-btn>
-                                                                    <v-btn text>90</v-btn>
+                                                            <v-row align="center" justify="center">
+                                                                <v-btn-toggle v-model="toggle_one" mandatory rounded dense>
+                                                                    <v-btn text small>Auto</v-btn>
+                                                                    <v-btn text small>-90</v-btn>
+                                                                    <v-btn text small>-45</v-btn>
+                                                                    <v-btn text small>0</v-btn>
+                                                                    <v-btn text small>45</v-btn>
+                                                                    <v-btn text small>90</v-btn>
                                                                 </v-btn-toggle>
                                                             </v-row>
                                                         </v-card-text>
                                                     </v-card>
                                                 </v-col>
                                             </v-row>
-                                            <p>Velocidad Ventilador:</p>
+                                            <p class="my-2">Velocidad Ventilador:</p>
                                             <v-row align="center" justify="center">
-                                                <v-col>
-                                                    <v-card flat class="py-12">
-                                                        <v-card-text>
+                                                <v-col class="py-0">
+                                                    <v-card flat class="py-0">
+                                                        <v-card-text class="py-2">
                                                             <p>Horizontal:</p>
-                                                            <v-row>
-                                                                <v-btn-toggle v-model="toggle_exclusive" rounded dense>
-                                                                    <v-btn text>Auto</v-btn>
-                                                                    <v-btn text>25</v-btn>
-                                                                    <v-btn text>50</v-btn>
-                                                                    <v-btn text>75</v-btn>
-                                                                    <v-btn text>100</v-btn>
+                                                            <v-row align="center" justify="center">
+                                                                <v-btn-toggle v-model="toggle_one" mandatory rounded dense>
+                                                                    <v-btn text small>Auto</v-btn>
+                                                                    <v-btn text small>25</v-btn>
+                                                                    <v-btn text small>50</v-btn>
+                                                                    <v-btn text small>75</v-btn>
+                                                                    <v-btn text small>100</v-btn>
                                                                 </v-btn-toggle>
                                                             </v-row>
                                                         </v-card-text>
